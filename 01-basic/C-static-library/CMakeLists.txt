@@ -6,12 +6,15 @@ project(hello_library)
 # Create a library
 ############################################################
 
-#Generate the static library from the library sources
-add_library(hello_library STATIC 
+# Generate the static library from the library sources
+add_library(${PROJECT_NAME} STATIC 
     src/Hello.cpp
 )
 
-target_include_directories(hello_library
+# .h
+# PUBLIC: it is included in this library and also any 
+#   targets that link this library.
+target_include_directories(${PROJECT_NAME}
     PUBLIC 
         ${PROJECT_SOURCE_DIR}/include
 )
@@ -29,5 +32,5 @@ add_executable(hello_binary
 # link the new hello_library target with the hello_binary target
 target_link_libraries( hello_binary
     PRIVATE 
-        hello_library
+        ${PROJECT_NAME}
 )

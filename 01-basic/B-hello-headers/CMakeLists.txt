@@ -13,11 +13,12 @@ set(SOURCES
 )
 
 # Add an executable with the above sources
-add_executable(hello_headers ${SOURCES})
+add_executable(${PROJECT_NAME} ${SOURCES})
 
 # Set the directories that should be included in the build command for this target
 # when running g++ these will be included as -I/directory/path/
-target_include_directories(hello_headers
+# PRIVATE: the directory is added to this target’s include directories
+target_include_directories(${PROJECT_NAME}
     PRIVATE 
         ${PROJECT_SOURCE_DIR}/include
 )
