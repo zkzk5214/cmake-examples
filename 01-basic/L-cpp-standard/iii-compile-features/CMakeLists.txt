@@ -9,6 +9,8 @@ project (hello_cpp11)
 # Add an executable
 add_executable(hello_cpp11 main.cpp)
 
+# Calling the target_compile_features function on a target will look at the passed in feature 
+#   and determine the correct compiler flag to use for your target.
 # set the C++ standard to the appropriate standard for using auto
 target_compile_features(hello_cpp11 PUBLIC cxx_auto_type)
 

@@ -1,7 +1,10 @@
 #include <iostream>
 #include <boost/shared_ptr.hpp>
 #include <boost/filesystem.hpp>
-
+/*
+Boost库是为C++语言标准库提供扩展的一些C++程序库的总称，由Boost社区组织开发、
+维护。Boost库可以与C++标准库完美共同工作，并且为其提供扩展功能。
+*/
 int main(int argc, char *argv[])
 {
     std::cout << "Hello Third Party Include!" << std::endl;

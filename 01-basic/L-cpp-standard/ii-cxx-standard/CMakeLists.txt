@@ -7,6 +7,8 @@ cmake_minimum_required(VERSION 3.1)
 project (hello_cpp11)
 
 # set the C++ standard to C++ 11
+# Setting the CMAKE_CXX_STANDARD variable causes the CXX_STANDARD property on all targets. 
+#   This causes CMake to set the appropriate flag at compille time.
 set(CMAKE_CXX_STANDARD 11)
 
 # Add an executable
